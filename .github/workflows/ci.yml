@@ -27,6 +27,6 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: build nodeJS
-        run: npm build
+        run: npm run build
       - name: npm test
         run: npm test
