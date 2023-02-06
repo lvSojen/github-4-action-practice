@@ -15,9 +15,9 @@ jobs:
       - run: npm ci
       # - name: build nodeJS
       - run: npm build
-jobs:
-  needs: test
+
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
