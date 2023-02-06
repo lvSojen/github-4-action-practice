@@ -8,4 +8,4 @@ jobs:
   issue:
     steps:
       runs-on: ubuntu-latest
-      run: echo ${{ toJSON(github)}}
+      run: echo "${{ toJSON(github)}}"
