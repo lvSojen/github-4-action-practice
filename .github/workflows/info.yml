@@ -3,9 +3,12 @@ on:
   issues:
     types:
       - opened
+      - created
+      - labeled
+  issue_comment:
+    types: [created, deleted]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name : display info on any open issues
         run: echo "${{ toJSON(github) }}"
