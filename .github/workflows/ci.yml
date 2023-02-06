@@ -11,10 +11,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: install dependencies
-          run: npm ci
-      - name: build nodeJS
-          run: npm build
+      # - name: install dependencies
+      - run: npm ci
+      # - name: build nodeJS
+      - run: npm build
 jobs:
   needs: test
   build:
@@ -24,9 +24,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: install dependencies
-          run: npm ci
-      - name: build nodeJS
-          run: npm build
-      - name: npm test
-          run: npm test
+      # - name: install dependencies
+        run: npm ci
+      # - name: build nodeJS
+        run: npm build
+      # - name: npm test
+        run: npm test
