@@ -13,11 +13,13 @@ jobs:
           node-version: "16"
       - name: install dependencies
         run: npm ci
+      - name: ESLint configuration
+        run: npm init @eslint/config
       - name: build nodeJS
         run: npm run lint
 
   test:
-    # needs: test
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,7 +32,7 @@ jobs:
         run: npm run test
 
   build:
-    # needs: test
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
