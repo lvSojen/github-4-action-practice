@@ -4,7 +4,7 @@ on:
     types:
       - opened
 jobs:
-  issue:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name : display info on any open issues
