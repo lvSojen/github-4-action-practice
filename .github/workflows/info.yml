@@ -7,4 +7,5 @@ jobs:
   issue:
     runs-on: ubuntu-latest
     steps:
-      run: echo "${{ toJSON(github) }}"
+      - name : display info on any open issues
+        run: echo "${{ toJSON(github) }}"
