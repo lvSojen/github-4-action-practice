@@ -1,9 +1,8 @@
 name: trigger on issue
 on:
-  issues
-  # types:
-  #   - opened
-  #   - labeled
+  issues:
+    types:
+      - opened
 jobs:
   issue:
     steps:
